@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(274deg, #dcfff6, #dbe9fd);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 2s ease infinite;
+  -moz-animation: AnimationName 4s ease infinite;
+  -o-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 79%;
+  }
+  50% {
+    background-position: 100% 22%;
+  }
+  100% {
+    background-position: 0% 79%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 79%;
+  }
+  50% {
+    background-position: 100% 22%;
+  }
+  100% {
+    background-position: 0% 79%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 79%;
+  }
+  50% {
+    background-position: 100% 22%;
+  }
+  100% {
+    background-position: 0% 79%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 79%;
+  }
+  50% {
+    background-position: 100% 22%;
+  }
+  100% {
+    background-position: 0% 79%;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+}
+
+/* scroll bar part  */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #dbd5d5;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dbe7e7;
+}
+/* navbar style part */
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 998;
+  transition: all 0.6s ease;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+nav.sticky {
+  background: linear-gradient(274deg, #9effe5, #b5d1fc, #6e31f4);
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+  padding: 13px 0;
+}
+
+@keyframes pulse {
+  0% {
+    background: linear-gradient(274deg, #9effe5, #b5d1fc, #6e31f4);
+  }
+  100% {
+    background: linear-gradient(274deg, #9effe5, #b5d1fc, #6e31f4);
+  }
+}
+nav .navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  /* background-color: #10daed; */
+  padding: 15px 0px;
+}
+nav .navbar .logo a {
+  font-weight: 500;
+  font-size: 35px;
+  color: #944848;
+}
+nav.sticky .navbar .logo a {
+  color: #fff;
+}
+nav .navbar .menu {
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li {
+  list-style: none;
+  margin: 0 35px;
+}
+.navbar .menu a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #0e2431;
+  padding: 6px 0;
+  transition: all 0.2s ease;
+}
+.navbar .menu a:hover {
+  color: #da338c;
+  font-weight: 1000;
+}
+nav.sticky .menu a {
+  color: #fff;
+}
+nav.sticky .menu a:hover {
+  color: #131516;
+}
+.navbar .media-icons a {
+  color: #944848;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a {
+  color: #fff;
+}
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn {
+  color: #944848;
+}
+nav.sticky .menu-btn {
+  color: #fff;
+}
+.navbar .menu .menu-btn {
+  color: #fff;
+}
+
+/* home part */
+.home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  /* background: url("images/main02.jpg") no-repeat; */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.home .home-content {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+}
+.home .text-one {
+  font-size: 18px;
+  color: rgb(110, 106, 106);
+}
+.home .text-two {
+  color: rgb(0, 0, 0);
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* margin-left: -3px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.home .text-three {
+  font-size: 18px;
+  margin: 5px 0;
+  color: rgb(110, 106, 106);
+}
+.home .text-four {
+  font-size: 23px;
+  margin: 5px 0;
+  color: #0e2431;
+}
+.home .button {
+  margin: 14px 0;
+}
+
+.home .button button {
+  background: -webkit-linear-gradient(0deg, #2a2a33 0%, #62bdfc 100%);
+  outline: none;
+  padding: 10px 26px;
+  border-radius: 1px;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.home .button button:hover {
+  background-color: #75b9de;
+  color: #070707;
+}
+
+.rightside img {
+  height: 350px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 350px;
+  align-content: flex-end;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  width: 50%;
+}
+section {
+  padding-top: 40px;
+}
+section .content {
+  width: 80%;
+  margin: 40px auto;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span {
+  color: #0e2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .about-details .left {
+  width: 45%;
+}
+.about .left img {
+  height: 230px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-details .right {
+  width: 50%;
+}
+section .topic {
+  color: #0e2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p {
+  text-align: justify;
+  color: #0e2431;
+}
+section .button {
+  margin: 16px 0;
+}
+section .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #010101;
+  color: rgb(248, 237, 237);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover {
+  background: #6e31f4;
+  background-color: #fff;
+  color: #944848;
+}
+
+/* My Skills part */
+.skills .content {
+  padding: 40px 0;
+}
+.skills .skills-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills-details .text {
+  width: 50%;
+}
+.skills-details p {
+  color: #0e2431;
+  text-align: justify;
+}
+.skills .skills-details .experience {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.skills-details .experience .num {
+  color: #0e2431;
+  font-size: 80px;
+}
+.skills-details .experience .exp {
+  color: #0e2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box {
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic {
+  font-size: 20px;
+
+  color: #414141;
+}
+.skills-details .boxes .per {
+  font-size: 60px;
+  color: #2b2b2b;
+}
+
+/* My Services part */
+.services .boxes {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box {
+  background: linear-gradient(-45deg, #686b6c, #56cffc, #7affe0);
+  animation: gradient 5s ease infinite;
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover {
+  background: linear-gradient(-45deg, #686b6c, #fcbf56, #e9ff7a);
+  color: rgb(0, 0, 0);
+}
+.services .boxes .box .icon {
+  height: 50px;
+  width: 50px;
+  background: #8d70cc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+  color: #0e2431;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+  color: #fff;
+}
+/* Contact Me part */
+.contact .content {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.contact .text {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/* Footer part */
+footer {
+  padding: 15px 0;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+footer .text span {
+  font-size: 17px;
+  font-weight: 400;
+  /* color: #fff; */
+  color: rgb(167, 167, 167);
+}
+footer .text span a {
+  font-weight: 500;
+  color: rgb(95, 95, 95);
+}
+footer .text span a:hover {
+  text-decoration: underline;
+}
+/* Scroll TO Top Button part */
+.scroll-button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #121112;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content {
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right {
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  nav .navbar {
+    width: 90%;
+  }
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0e2431;
+    height: 100vh;
+    max-width: 500px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: stretch;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu {
+    left: 0;
+  }
+  nav .navbar .menu a {
+    font-size: 23px;
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav .navbar .media-icons {
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+  .home .text-one {
+    font-size: 18px;
+    color: rgb(110, 106, 106);
+  }
+  .home .text-two {
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    font-weight: 500;
+    text-transform: uppercase;
+    /* margin-left: -3px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .home .text-three {
+    font-size: 18px;
+    margin: 5px 0;
+    color: rgb(110, 106, 106);
+  }
+  .home .text-four {
+    font-size: 23px;
+    margin: 5px 0;
+    color: #0e2431;
+  }
+  .skills .skills-details {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box {
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .text-two {
+    font-size: 55px;
+  }
+  .home .text-three {
+    font-size: 33px;
+  }
+  .skills-details .boxes .per {
+    font-size: 50px;
+    color: #944848;
+  }
+}
+.hire a {
+  color: #fff !important;
+}
+.button a {
+  color: #fff !important;
+}
+.button a:hover {
+  color: #000 !important;
+}
